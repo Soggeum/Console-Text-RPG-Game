@@ -13,3 +13,6 @@ CH2 Team Project
 ## 몬스터 다이어그램
 <img width="1190" height="548" alt="image" src="https://github.com/user-attachments/assets/f9b12f6a-1dd9-4cd2-b731-8d01d5ab6d30" />
 
+## LogManager Diagram
+<img width="500" height="500" alt="Image" src="https://github.com/user-attachments/assets/1e78d9fe-b986-4641-9511-1940888c791d" />
+
