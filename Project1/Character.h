@@ -50,6 +50,7 @@ public:
 	void UseItem(int index);
 	void PrintStat();
 	void UseGold(int value);
+	void SetName();
 
 	//ÀüÁ÷
 	void ClassChange();
