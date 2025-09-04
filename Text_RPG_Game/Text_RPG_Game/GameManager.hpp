@@ -6,10 +6,10 @@
 #include <ctime>    // time
 #include <memory>
 
-#include "Character.hpp"
 #include "Monster.h"
 #include "Battle.hpp"
 #include "Shop.hpp"
+#include "Character.hpp"
 
 
 using namespace std;

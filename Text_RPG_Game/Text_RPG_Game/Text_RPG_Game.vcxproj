@@ -123,15 +123,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Battle.cpp" />
     <ClCompile Include="BossMonster.cpp" />
+    <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Goblin.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Orc.cpp" />
     <ClCompile Include="Slime.cpp" />
     <ClCompile Include="Troll.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Battle.hpp" />
     <ClInclude Include="BossMonster.h" />
+    <ClInclude Include="GameManager.hpp" />
     <ClInclude Include="Goblin.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Orc.h" />
