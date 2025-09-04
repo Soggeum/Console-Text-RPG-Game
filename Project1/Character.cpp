@@ -121,3 +121,12 @@ void Character::SetName()
 
 	} while (names.empty() || all_of(names.begin(), names.end(), ::isspace));
 }
+
+//죽으면 true, 살아있으면 false
+bool Character::IsDead()
+{
+	if (health <= 0)
+		return true;
+	else
+		return false;
+}
