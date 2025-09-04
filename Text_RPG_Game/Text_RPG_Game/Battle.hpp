@@ -1,5 +1,5 @@
 #pragma once
-
+#include "Monster.h"
 #include "GameManager.hpp"
 
 class Battle

@@ -4,7 +4,7 @@ Battle::Battle(Character* player, bool& isClear) : player(player), isClear(isCle
 {
 	if (player->getLevel() < 10) {
 		monster = generateMonster(player->getLevel());
-		cout << "몬스터 " << monster->getName() << " 등장!체력: " << monster->getHP() << ", 공격력 : " << monster->getAttack() << endl;
+		cout << "몬스터 " << monster->getName() << " 등장!체력: " << monster->getHp() << ", 공격력 : " << monster->getAttack() << endl;
 
 		// 전투 시작 및 클리어 여부
 		isClear = Begin();
@@ -12,7 +12,7 @@ Battle::Battle(Character* player, bool& isClear) : player(player), isClear(isCle
 
 	else {
 		monster = generateBossMonster(player->getLevel());
-		cout << "보스 몬스터 " << monster->getName() << " 등장! 체력: " << monster->getHP()<< ", 공격력: " << monster->getAttack() << endl;
+		cout << "보스 몬스터 " << monster->getName() << " 등장! 체력: " << monster->getHp()<< ", 공격력: " << monster->getAttack() << endl;
 
 		// 전투 시작 및 클리어 여부
 		isClear = BossBegin();
@@ -37,7 +37,7 @@ bool Battle::Begin()
 			cout << player->getName() << "이(가) " << monster->getName() << "을(를) 공격합니다!";
 
 			// 몬스터 사망
-			if (monster->getHP() <= 0) {
+			if (monster->getHp() <= 0) {
 				cout << monster->getName() << " 처치!\n";
 				int money = (rand() % 11) + 10;
 				player->incrementEXP(50);
@@ -122,7 +122,7 @@ bool Battle::BossBegin()
 			cout << player->getName() << "이(가) " << monster->getName() << "을(를) 공격합니다!";
 
 			// 몬스터 사망
-			if (monster->getHP() <= 0) {
+			if (monster->getHp() <= 0) {
 				cout << monster->getName() << " 처치!\n";
 				cout << "축하합니다!보스 " << monster->getName() << "을 처치하고 게임을 클리어했습니다!" << endl;
 				system("pause");
