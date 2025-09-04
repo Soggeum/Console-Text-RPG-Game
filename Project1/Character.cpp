@@ -130,3 +130,8 @@ bool Character::IsDead()
 	else
 		return false;
 }
+
+int Character::GetLevel()
+{
+	return level;
+}

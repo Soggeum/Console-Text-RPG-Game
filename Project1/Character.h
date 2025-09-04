@@ -51,6 +51,8 @@ public:
 	void PrintStat();
 	void UseGold(int value);
 	void SetName();
+	bool IsDead();
+	int GetLevel();
 
 	//ÀüÁ÷
 	void ClassChange();
