@@ -1,5 +1,10 @@
 #pragma once
 #include "Monster.h"
+#include "Slime.h"
+#include "Goblin.h"
+#include "Orc.h"
+#include "Troll.h"
+#include "BossMonster.h"
 #include "GameManager.hpp"
 
 class Battle
