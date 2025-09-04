@@ -6,13 +6,11 @@ CH2 Team Project
 
 
 ## GameManager Diagram
-<img width="762" height="957" alt="image" src="https://github.com/user-attachments/assets/7d7b582a-01c7-43bd-9bf4-bc73542aba24" />
-
-
+<img width="710" height="930" alt="image" src="https://github.com/user-attachments/assets/6eb9b7e3-020d-4390-9dfc-e3e4fd2c42c1" />
 
 
 ## 몬스터 다이어그램
-<img width="1190" height="548" alt="image" src="https://github.com/user-attachments/assets/f9b12f6a-1dd9-4cd2-b731-8d01d5ab6d30" />
+<img width="1231" height="517" alt="image" src="https://github.com/user-attachments/assets/f227acf2-e148-4c6d-8f0a-d933ef41b503" />
 
 ## LogManager Diagram
 <img width="500" height="500" alt="Image" src="https://github.com/user-attachments/assets/1e78d9fe-b986-4641-9511-1940888c791d" />
