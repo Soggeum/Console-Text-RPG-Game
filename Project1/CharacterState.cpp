@@ -10,3 +10,8 @@ string CharacterState::GetState()
 {
     return state;
 }
+
+int CharacterState::GetAttack()
+{
+    return attack;
+}

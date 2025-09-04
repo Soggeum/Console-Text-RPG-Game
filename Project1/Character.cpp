@@ -31,6 +31,11 @@ int Character::GetAttack()
 	return state->GetAttack();
 }
 
+void Character::Attack(Monster* mon)
+{
+	state->Attack(mon);
+}
+
 void Character::TakeDamage(int dmg)
 {
 	health -= dmg;
@@ -40,7 +45,7 @@ void Character::LevelUp()
 {
 	if (level < maxLevel) {
 		++level;
-		experience = 0;
+		experience = experience-levelupExp;
 		maxHealth = (maxHealth + (level * 20));
 		state->SetAttack(state->GetAttack() + (level * 5));
 		health = maxHealth;
@@ -60,33 +65,23 @@ void Character::ClassChange()
 	int sel;
 	cout << "원하는직업 (1.궁수 2.도적 3.전사):" << endl;
 	cin >> sel;
-
+	CharacterState* newState = nullptr;
 	switch (sel) {
 	case 1:
-		CharacterState * newState = new Archer(GetAttack()/3);
-		if (state != nullptr) {
-			delete state;
-			state = nullptr;
-		}
-		state = newState;
+		newState = new Archer(GetAttack()/3);		
 		break;
 	case 2:
-		CharacterState * newState = new Thief(GetAttack() / 3);
-		if (state != nullptr) {
-			delete state;
-			state = nullptr;
-		}
-		state = newState;
+		newState = new Thief(GetAttack() / 3);		
 		break;
 	case 3:
-		CharacterState * newState = new Warrior(GetAttack());
-		if (state != nullptr) {
-			delete state;
-			state = nullptr;
-		}
-		state = newState;
+		newState = new Warrior(GetAttack());		
 		break;
 	}
+	if (state != nullptr) {
+		delete state;
+		state = nullptr;
+	}
+	state = newState;
 }
 
 void Character::UseItem(int index)
@@ -134,4 +129,13 @@ bool Character::IsDead()
 int Character::GetLevel()
 {
 	return level;
+}
+
+void Character::GetReward(int money, int exp)
+{
+	gold += money;
+	experience += exp;
+	if (experience >= levelupExp) {
+		LevelUp();
+	}
 }

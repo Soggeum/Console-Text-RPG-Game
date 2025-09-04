@@ -1,11 +1,19 @@
 #include "Archer.h"
 
 Archer::Archer(int attack)
-    :CharacterState(attack, "Arhcer")
+	:CharacterState(attack, "Arhcer")
 {
 }
 
-int Archer::GetAttack()
+void Archer::Attack(Monster* mon)
 {
-    return attack;
+	cout << "archer°ø°Ý" << endl;
+	/*for (int i = 0; i < 3; i++) {
+		 mon.GetHp()-=attack;
+	}*/
+
 }
+
+
+
+

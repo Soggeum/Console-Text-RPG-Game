@@ -5,7 +5,8 @@ Warrior::Warrior(int attack)
 {
 }
 
-int Warrior::GetAttack()
+void Warrior::Attack(Monster* mon)
 {
-    return attack;
+    
+    // mon.GetHp()-=attack;
 }

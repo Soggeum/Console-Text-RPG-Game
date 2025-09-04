@@ -5,10 +5,14 @@ None::None(int attack)
 {
 }
 
-int None::GetAttack()
+void None::Attack(Monster* mon)
 {
-    return attack;
+    //1회공격
+    cout << "none 공격" << endl;
+    // mon.GetHp()-=attack;
+
 }
+
 
 
 

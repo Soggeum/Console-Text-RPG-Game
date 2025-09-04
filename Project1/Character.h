@@ -35,16 +35,12 @@ public:
 		
 	}
 
-	template <typename T>
-	static void ChangeInstance() {
-		delete instance;
-
-		instance = new T();
-	}
 	
 	int GetHP();
 	//플레이어 공격력 반환
 	int GetAttack();
+	//플레이어가 몬스터 공격
+	void Attack(Monster* mon);
 	void TakeDamage(int dmg);
 	void LevelUp();
 	void UseItem(int index);
@@ -53,6 +49,8 @@ public:
 	void SetName();
 	bool IsDead();
 	int GetLevel();
+
+	void GetReward(int money,int exp);
 
 	//전직
 	void ClassChange();

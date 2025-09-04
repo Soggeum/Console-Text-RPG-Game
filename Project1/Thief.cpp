@@ -5,7 +5,12 @@ Thief::Thief(int attack)
 {
 }
 
-int Thief::GetAttack()
+void Thief::Attack(Monster* mon)
 {
-    return attack;
+    //5È¸°ø°Ý
+    /*for (int i = 0; i < 5; i++) {
+         mon.GetHp()-=attack;
+    }*/
 }
+
+
