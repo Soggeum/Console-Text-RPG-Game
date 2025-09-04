@@ -11,5 +11,5 @@ CH2 Team Project
 
 
 ## 몬스터 다이어그램
-<img width="1190" height="548" alt="image" src="https://github.com/user-attachments/assets/f9b12f6a-1dd9-4cd2-b731-8d01d5ab6d30" />
+<img width="1231" height="517" alt="image" src="https://github.com/user-attachments/assets/f227acf2-e148-4c6d-8f0a-d933ef41b503" />
 
