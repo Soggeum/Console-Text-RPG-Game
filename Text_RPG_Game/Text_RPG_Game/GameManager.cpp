@@ -60,6 +60,7 @@ void GameManager::BeginGame()
 		}
 
 		else if (choice == 2) {
+			system("cls");
 			player->PrintStat();
 			system("pause");
 			continue;
