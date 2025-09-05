@@ -37,9 +37,6 @@ public:
 
 	
 	int GetHP();
-	string getName() { return names; }
-	int GetEXP() { return experience; }
-	int GetGold() { return gold; }
 	//플레이어 공격력 반환
 	int GetAttack();
 	//플레이어가 몬스터 공격
@@ -52,7 +49,6 @@ public:
 	void SetName();
 	bool IsDead();
 	int GetLevel();
-	void SetHp(int dmg);
 
 	void GetReward(int money,int exp);
 

@@ -6,6 +6,6 @@ public:
 	Slime() = default;
 	Slime(int level);
 	void takeDamage(int damage) override;
-	Item* dropItem() override;
+	//Item* dropItem() override;
 };
 

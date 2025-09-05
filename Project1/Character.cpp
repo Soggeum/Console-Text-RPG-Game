@@ -4,11 +4,12 @@
 Character* Character::instance = nullptr;
 
 Character::Character()
-	:maxHealth(200), level(1), health(200), experience(0), gold(0)
+	:maxHealth(100), level(1), health(200), experience(0), gold(0)
 {
 	if (state == nullptr) {
 		state = new None(30);
 	}
+	SetName();	
 }
 
 Character::~Character()
@@ -110,7 +111,7 @@ void Character::UseGold(int value)
 void Character::SetName()
 {
 	do {
-		cout << "이름 입력: ";
+		cout << "이름 입력: " << endl;
 		getline(cin, names);
 
 	} while (names.empty() || all_of(names.begin(), names.end(), ::isspace));
@@ -128,11 +129,6 @@ bool Character::IsDead()
 int Character::GetLevel()
 {
 	return level;
-}
-
-void Character::SetHp(int dmg)
-{
-	health -= dmg;
 }
 
 void Character::GetReward(int money, int exp)

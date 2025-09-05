@@ -7,17 +7,17 @@ BossMonster::BossMonster(int level) {
 void BossMonster::takeDamage(int damage) {
 	setHp(hp - damage);
 }
-Item* BossMonster::dropItem() {
-	int r = rand() % 100;
-	if (r < 30) {
-		Item* item = nullptr;
-		if (r % 2 == 0) {
-			item = new HealthPotion();
-			return item;//체력물약
-		}
-		else {
-			item = new AttackBoost();
-			return item;//버프물약
-		}
-	}
-}
+//Item* BossMonster::dropItem() {
+//	int r = rand() % 100;
+//	if (r < 30) {
+//		Item* item = nullptr;
+//		if (r % 2 == 0) {
+//			item = new HealthPotion();
+//			return item;//체력물약
+//		}
+//		else {
+//			item = new AttackBoost();
+//			return item;//버프물약
+//		}
+//	}
+//}

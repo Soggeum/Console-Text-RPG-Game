@@ -9,8 +9,7 @@ void None::Attack(Monster* mon)
 {
     //1회공격
     cout << "none 공격" << endl;
-
-    mon->setHp(mon->getHp()-attack);
+    // mon.GetHp()-=attack;
 
 }
 
