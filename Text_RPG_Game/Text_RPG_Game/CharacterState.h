@@ -15,6 +15,7 @@ public:
 	int GetAttack();
 	string GetState();
 	void SetAttack(int atk);
+	void AddAttack(int atk);
 protected:
 	int attack;
 	string state;

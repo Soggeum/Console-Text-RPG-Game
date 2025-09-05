@@ -15,3 +15,8 @@ int CharacterState::GetAttack()
 {
     return attack;
 }
+
+void CharacterState::AddAttack(int atk)
+{
+    attack += atk;
+}
