@@ -18,7 +18,8 @@ Item* BossMonster::dropItem() {
 		Item* item = nullptr;
 		if (r % 2 == 0) {
 			item = new HealthPotion();
-      return item;
+			return item;
+		}
 		else {
 			item = new AttackBoost();
 			return item;
