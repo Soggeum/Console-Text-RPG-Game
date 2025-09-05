@@ -6,6 +6,6 @@ public:
 	Troll() = default;
 	Troll(int level);
 	void takeDamage(int damage) override;
-	Item* dropItem() override;
+	//Item* dropItem() override;
 };
 
