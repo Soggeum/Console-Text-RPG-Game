@@ -127,7 +127,7 @@ bool Battle::BossBegin()
 			// 몬스터 사망
 			if (monster->getHp() <= 0) {
 				cout << monster->getName() << " 처치!\n";
-				cout << "축하합니다!보스 " << monster->getName() << "을 처치하고 게임을 클리어했습니다!" << endl;
+				cout << "축하합니다! 보스 몬스터" << monster->getName() << "을 처치하고 게임을 클리어했습니다!" << endl;
 				system("pause");
 				return true;
 			}
