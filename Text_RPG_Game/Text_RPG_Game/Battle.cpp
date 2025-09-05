@@ -43,7 +43,10 @@ bool Battle::Begin()
 				player->GetReward(money, 50);
 				cout << player->getName() << "이(가) 50 EXP와 " << money << " 골드를 획득했습니다.현재 EXP : "
 					<< player->GetEXP() << " / 100, 골드 : " << player->GetGold() << endl;
+
 				// --- 몬스터 아이템 ---
+
+				
 				system("pause");
 				return false;
 			}
