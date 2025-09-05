@@ -20,6 +20,7 @@ private:
 	bool isClear;
 	Character* player;
 //	Shop* shop;
+//	LogManager* logmanager;
 
 public:
 	GameManager();

@@ -13,6 +13,12 @@ GameManager::GameManager()
 
 	// 3. Shop 생성
 	//shop = new Shop();
+
+	// 4. LogManager 생성
+	/*
+	logmanager = new LogManager();
+	*/
+
 }
 
 GameManager::~GameManager()
@@ -34,6 +40,7 @@ void GameManager::BeginGame()
 		cout << "2. 플레이어 스텟 확인\n";
 		cout << "3. 플레이어 인벤토리 보기\n";
 		cout << "4. 상점 가기\n";
+//		cout << "5. 게임 로그 보기\n";	// (게임 종료를 6번으로)
 		cout << "5. 게임 종료\n";
 		cout << "번호 입력: ";
 
@@ -72,6 +79,14 @@ void GameManager::BeginGame()
 		else if (choice == 5) {
 			return;
 		}
+
+		/*
+		else if (choice == 6) {
+			logManager->displayLog();
+			system("pause");
+			continue;
+		}
+		*/
 
 		else {
 			cout << "잘못된 선택입니다. 다시 시도하세요." << endl;
