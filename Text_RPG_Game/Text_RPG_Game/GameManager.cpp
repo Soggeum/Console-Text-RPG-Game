@@ -4,12 +4,6 @@ GameManager::GameManager()
 {
 
 	// 1. 캐릭터 생성
-	/*string name;
-	cout << "캐릭터 이름을 입력하세요: ";
-	getline(cin >> ws, name);
-	cout << endl;
-
-	player = getCharacter(name);*/
 	player = Character::GetInstance();
 	player->SetName();
 	isClear = false;
@@ -19,8 +13,6 @@ GameManager::GameManager()
 
 	// 3. Shop 생성
 	//shop = new Shop();
-
-	BeginGame();
 }
 
 GameManager::~GameManager()
@@ -56,10 +48,10 @@ void GameManager::BeginGame()
 
 		if (choice == 1) {
 			Battle battle(player, isClear);
-			system("pause");
 		}
 
 		else if (choice == 2) {
+			system("cls");
 			player->PrintStat();
 			system("pause");
 			continue;

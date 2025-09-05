@@ -2,6 +2,7 @@
 
 Battle::Battle(Character* player, bool& isClear) : player(player), isClear(isClear)
 {
+	system("cls");
 	if (player->GetLevel() < 10) {
 		monster = generateMonster(player->GetLevel());
 		cout << "몬스터 " << monster->getName() << " 등장!체력: " << monster->getHp() << ", 공격력 : " << monster->getAttack() << endl;
@@ -43,7 +44,10 @@ bool Battle::Begin()
 				player->GetReward(money, 50);
 				cout << player->getName() << "이(가) 50 EXP와 " << money << " 골드를 획득했습니다.현재 EXP : "
 					<< player->GetEXP() << " / 100, 골드 : " << player->GetGold() << endl;
+
 				// --- 몬스터 아이템 ---
+
+				
 				system("pause");
 				return false;
 			}
