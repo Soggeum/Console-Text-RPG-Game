@@ -12,6 +12,7 @@ public:
 	Monster();
 	virtual ~Monster()=default;
 	int getHp() const;
+	virtual void displayStatus() const;
 	void setHp(int hp);
 	int getAttack() const;
 	string getName() const;

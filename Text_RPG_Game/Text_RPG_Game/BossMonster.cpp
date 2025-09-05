@@ -7,6 +7,9 @@ BossMonster::BossMonster(int level) {
 void BossMonster::takeDamage(int damage) {
 	setHp(hp - damage);
 }
+void BossMonster::displayStatus() const {
+	cout << "\033[31m"<< name << "의 체력: " << hp << ", 공격력 : " << attack<< "\033[0m"<< endl;
+}
 //Item* BossMonster::dropItem() {
 //	int r = rand() % 100;
 //	if (r < 30) {

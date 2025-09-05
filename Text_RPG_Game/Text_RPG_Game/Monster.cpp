@@ -19,3 +19,6 @@ void Monster::setHp(int hp) {
 	}
 	this->hp = hp;
 }
+void Monster::displayStatus() const {
+	cout << name << "의 체력: " << hp << ", 공격력 : " << attack << endl;
+}

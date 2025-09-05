@@ -78,7 +78,7 @@ bool Battle::Begin()
 
 		// 3. Àû ½ºÅÝ È®ÀÎ
 		else if (choice == 3) {
-			//monster->displayStatus();
+			monster->displayStatus();
 			system("pause");
 			continue;
 		}
