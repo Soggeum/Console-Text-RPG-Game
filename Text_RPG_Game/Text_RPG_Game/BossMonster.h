@@ -6,6 +6,7 @@ public:
 	BossMonster() = default;
 	BossMonster(int level);
 	void takeDamage(int damage) override;
+	void displayStatus() const override;
 //	Item* dropItem() override;
 };
 
