@@ -9,7 +9,7 @@ int main() {
 	Character hero("Hero");
 
 	while (1) {
-		
+
 		cout << "==========================" << endl;
 		cout << "1. 인벤토리 보기" << endl;
 		cout << "2. 아이템 생성" << endl;
@@ -57,7 +57,7 @@ int main() {
 			cout << "유효하지 않은 선택입니다." << endl;
 		}
 
-		
+
 	}
 
 	return 0;

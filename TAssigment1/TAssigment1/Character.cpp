@@ -17,14 +17,14 @@ void Character::showInventory()
 {
 	cout << "인벤토리" << endl;
 	for (size_t i = 0; i < inventory.size(); i++) {
-		cout <<  i +1  << ": " << inventory[i]->getName() << endl;
+		cout << i + 1 << ": " << inventory[i]->getName() << endl;
 	}
 	cout << endl;
 }
 
 void Character::useItem(int index)
 {
-	if(index < 0 || index >= inventory.size()) {
+	if (index < 0 || index >= inventory.size()) {
 		cout << "유효하지 않은 값입니다" << endl;
 		return;
 	}
