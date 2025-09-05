@@ -131,6 +131,11 @@ int Character::GetLevel()
 	return level;
 }
 
+void Character::SetHp(int dmg)
+{
+	health -= dmg;
+}
+
 void Character::GetReward(int money, int exp)
 {
 	gold += money;

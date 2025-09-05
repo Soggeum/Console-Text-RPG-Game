@@ -49,6 +49,7 @@ public:
 	void SetName();
 	bool IsDead();
 	int GetLevel();
+	void SetHp(int dmg);
 
 	void GetReward(int money,int exp);
 

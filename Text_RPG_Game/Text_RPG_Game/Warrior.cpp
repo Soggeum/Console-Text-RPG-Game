@@ -6,7 +6,7 @@ Warrior::Warrior(int attack)
 }
 
 void Warrior::Attack(Monster* mon)
-{
-    
-    // mon.GetHp()-=attack;
+{    
+    cout << "Warrior АјАн" << endl;
+    mon->setHp(mon->getHp() - attack);
 }

@@ -135,6 +135,7 @@
     <ClCompile Include="Thief.cpp" />
     <ClCompile Include="Troll.cpp" />
     <ClCompile Include="Warrior.cpp" />
+    <ClCompile Include="소스.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Archer.h" />
