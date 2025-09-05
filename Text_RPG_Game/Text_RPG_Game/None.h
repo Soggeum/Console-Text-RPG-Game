@@ -1,5 +1,4 @@
 #pragma once
-#include"CharacterState.h"
 #include"Character.h"
 
 class None : public CharacterState

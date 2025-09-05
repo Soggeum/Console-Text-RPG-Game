@@ -8,6 +8,7 @@ class Character;
 
 class Item {
 public:
+	Item() = default;
 	virtual string getName() = 0;
 	virtual void use(Character* character) = 0;
 };

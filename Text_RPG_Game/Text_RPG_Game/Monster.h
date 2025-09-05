@@ -1,10 +1,10 @@
 #pragma once
 #include<string>
 #include<iostream>
-#include"Item.h"
-#include"HealthPotion.h"
-#include"AttackBoost.h"
 using namespace std;
+class Item;
+class HealthPotion;
+class AttackBoost;
 class Monster {
 protected:
 	string name;

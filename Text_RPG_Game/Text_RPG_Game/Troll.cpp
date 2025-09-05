@@ -1,4 +1,6 @@
 #include "Troll.h"
+#include "HealthPotion.h" 
+#include "AttackBoost.h"
 Troll::Troll(int level) {
 	hp = level * (rand() % 11 + 20);
 	attack = level * (rand() % 6 + 5);

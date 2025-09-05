@@ -1,4 +1,6 @@
 #include "Orc.h"
+#include "HealthPotion.h" 
+#include "AttackBoost.h"
 Orc::Orc(int level) {
 	hp = level * (rand() % 11 + 20);
 	attack = level * (rand() % 6 + 5);
