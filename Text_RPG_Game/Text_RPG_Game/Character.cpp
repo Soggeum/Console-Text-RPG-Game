@@ -55,7 +55,7 @@ void Character::LevelUp()
 		experience = 100;
 	}
 
-	if (level == 2) {
+	if (level == 5) {
 		ClassChange();
 	}
 }
