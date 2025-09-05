@@ -39,8 +39,14 @@ bool Battle::Begin()
 			if (monster->getHp() <= 0) {
 				cout << monster->getName() << " 처치!\n";
 				int money = (rand() % 11) + 10;
-				player->GetReward(money, 50);				
-				// --- 몬스터 아이템 ---
+				player->GetReward(money, 50);		
+
+				// 아이템 드롭
+				Item* pItem = monster->dropItem();
+				if (pItem != nullptr) 
+					player->AddItem(pItem);
+
+
 				system("pause");
 				return false;
 			}
