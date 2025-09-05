@@ -6,6 +6,6 @@ public:
 	Orc() = default;
 	Orc(int level);
 	void takeDamage(int damage) override;
-//	Item* dropItem()	override;
+	Item* dropItem()	override;
 };
 

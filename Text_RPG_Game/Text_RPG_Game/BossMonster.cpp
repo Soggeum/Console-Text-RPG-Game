@@ -1,26 +1,30 @@
 #include "BossMonster.h"
+#include "HealthPotion.h" 
+#include "AttackBoost.h"
 BossMonster::BossMonster(int level) {
-	hp = (level * rand() % 11 + 20) * 1.5;//¼Ò¼öÁ¡¹ö¸²
-	attack = (level * rand() % 6 + 5)*1.5;//¼Ò¼öÁ¡¹ö¸²
-	name = "º¸½º¸ó½ºÅÍ";
+
+	hp = (level * (rand() % 11 + 20)) * 1.5;//ì†Œìˆ˜ì ë²„ë¦¼
+	attack = (level * (rand() % 6 + 5))*1.5;//ì†Œìˆ˜ì ë²„ë¦¼
+	name = "Dragon";
 }
 void BossMonster::takeDamage(int damage) {
 	setHp(hp - damage);
 }
 void BossMonster::displayStatus() const {
-	cout << "\033[31m"<< name << "ÀÇ Ã¼·Â: " << hp << ", °ø°İ·Â : " << attack<< "\033[0m"<< endl;
+	cout << "\033[31m ë³´ìŠ¤ëª¬ìŠ¤í„° " << name << "ì˜ ì²´ë ¥: " << hp << ", ê³µê²©ë ¥ : " << attack << "\033[0m" << endl;//êµ¬í˜• cmdì œì™¸ ë¹¨ê°„ìƒ‰
 }
-//Item* BossMonster::dropItem() {
-//	int r = rand() % 100;
-//	if (r < 30) {
-//		Item* item = nullptr;
-//		if (r % 2 == 0) {
-//			item = new HealthPotion();
-//			return item;//Ã¼·Â¹°¾à
-//		}
-//		else {
-//			item = new AttackBoost();
-//			return item;//¹öÇÁ¹°¾à
-//		}
-//	}
-//}
+Item* BossMonster::dropItem() {
+	int r = rand() % 100;
+	if (r < 30) {
+		Item* item = nullptr;
+		if (r % 2 == 0) {
+			item = new HealthPotion();
+		  return item;
+		}
+		else {
+			item = new AttackBoost();
+			return item;
+		}
+	}
+	return nullptr;
+}
