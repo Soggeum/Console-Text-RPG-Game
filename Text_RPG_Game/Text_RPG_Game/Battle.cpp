@@ -12,7 +12,7 @@ Battle::Battle(Character* player, bool& isClear) : player(player), isClear(isCle
 
 	else {
 		monster = generateBossMonster(player->GetLevel());
-		cout << "보스 몬스터 " << monster->getName() << " 등장! 체력: " << monster->getHp()<< ", 공격력: " << monster->getAttack() << endl;
+		cout << "\033[31m보스 몬스터 " << monster->getName() << " 등장! 체력: " << monster->getHp()<< ", 공격력: " << monster->getAttack() << "\033[0m" <<endl;
 
 		// 전투 시작 및 클리어 여부
 		isClear = BossBegin();
@@ -160,7 +160,7 @@ bool Battle::BossBegin()
 
 		// 3. 적 스텟 확인
 		else if (choice == 3) {
-			//monster->displayStatus();
+			monster->displayStatus();
 			system("pause");
 			continue;
 		}

@@ -4,7 +4,7 @@
 BossMonster::BossMonster(int level) {
 
 	hp = (level * (rand() % 11 + 20)) * 1.5;//소수점버림
-	attack = (level * (rand() % 6 + 5)) * 1.5;//소수점버림
+	attack = (level * (rand() % 6 + 5))*1.5;//소수점버림
 	name = "Dragon";
 }
 void BossMonster::takeDamage(int damage) {
@@ -19,7 +19,7 @@ Item* BossMonster::dropItem() {
 		Item* item = nullptr;
 		if (r % 2 == 0) {
 			item = new HealthPotion();
-			return item;
+		  return item;
 		}
 		else {
 			item = new AttackBoost();
