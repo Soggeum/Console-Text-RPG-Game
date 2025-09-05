@@ -8,8 +8,8 @@
 
 #include "Monster.h"
 #include "Battle.hpp"
-#include "Shop.hpp"
-#include "Character.hpp"
+// #include "Shop.hpp"
+#include "Character.h"
 
 
 using namespace std;
@@ -19,7 +19,7 @@ class GameManager
 private:
 	bool isClear;
 	Character* player;
-	Shop* shop;
+//	Shop* shop;
 
 public:
 	GameManager();

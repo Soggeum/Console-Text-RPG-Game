@@ -2,8 +2,8 @@
 
 Battle::Battle(Character* player, bool& isClear) : player(player), isClear(isClear)
 {
-	if (player->getLevel() < 10) {
-		monster = generateMonster(player->getLevel());
+	if (player->GetLevel() < 10) {
+		monster = generateMonster(player->GetLevel());
 		cout << "몬스터 " << monster->getName() << " 등장!체력: " << monster->getHp() << ", 공격력 : " << monster->getAttack() << endl;
 
 		// 전투 시작 및 클리어 여부
@@ -11,7 +11,7 @@ Battle::Battle(Character* player, bool& isClear) : player(player), isClear(isCle
 	}
 
 	else {
-		monster = generateBossMonster(player->getLevel());
+		monster = generateBossMonster(player->GetLevel());
 		cout << "보스 몬스터 " << monster->getName() << " 등장! 체력: " << monster->getHp()<< ", 공격력: " << monster->getAttack() << endl;
 
 		// 전투 시작 및 클리어 여부
@@ -33,17 +33,16 @@ bool Battle::Begin()
 
 		// 1. 공격 시나리오
 		if (choice == 1) {
-			monster->takeDamage(player->getAttack());
+			player->Attack(monster);
 			cout << player->getName() << "이(가) " << monster->getName() << "을(를) 공격합니다!";
 
 			// 몬스터 사망
 			if (monster->getHp() <= 0) {
 				cout << monster->getName() << " 처치!\n";
 				int money = (rand() % 11) + 10;
-				player->incrementEXP(50);
-				player->incrementGold(money);
+				player->GetReward(money, 50);
 				cout << player->getName() << "이(가) 50 EXP와 " << money << " 골드를 획득했습니다.현재 EXP : "
-					<< 50 << " / 100, 골드 : " << 12 << endl;
+					<< player->GetEXP() << " / 100, 골드 : " << player->GetGold() << endl;
 				// --- 몬스터 아이템 ---
 				system("pause");
 				return false;
@@ -52,12 +51,12 @@ bool Battle::Begin()
 			// 몬스터의 공격
 			else {
 				cout << monster->getName() << "이(가) " << player->getName() << "을(를) 공격합니다!";
-				player->takeDamage(monster->getAttack());
+				player->TakeDamage(monster->getAttack());
 
-				cout << player->getName() << " 체력 : " << player->getHP() << endl;
+				cout << player->getName() << " 체력 : " << player->GetHP() << endl;
 
 				// 플레이어 사망
-				if (player->isDead()) {
+				if (player->IsDead()) {
 					cout << player->getName() << "이(가) 사망했습니다. 게임 오버!";
 					system("pause");
 					return false;
@@ -72,21 +71,21 @@ bool Battle::Begin()
 
 		// 2. 플레이어 스텟 확인
 		else if (choice == 2) {
-			player->displayStatus();
+			player->PrintStat();
 			system("pause");
 			continue;
 		}
 
 		// 3. 적 스텟 확인
 		else if (choice == 3) {
-			monster->displayStatus();
+			//monster->displayStatus();
 			system("pause");
 			continue;
 		}
 
 		// 4. 인벤토리 확인
 		else if (choice == 4) {
-			player->displayInventory();
+			//player->displayInventory();
 			system("pause");
 			continue;
 		}
@@ -118,7 +117,7 @@ bool Battle::BossBegin()
 
 		// 1. 공격 시나리오
 		if (choice == 1) {
-			monster->takeDamage(player->getAttack());
+			monster->takeDamage(player->GetAttack());
 			cout << player->getName() << "이(가) " << monster->getName() << "을(를) 공격합니다!";
 
 			// 몬스터 사망
@@ -132,12 +131,12 @@ bool Battle::BossBegin()
 			// 몬스터의 공격
 			else {
 				cout << monster->getName() << "이(가) " << player->getName() << "을(를) 공격합니다!";
-				player->takeDamage(monster->getAttack());
+				player->TakeDamage(monster->getAttack());
 
-				cout << player->getName() << " 체력 : " << player->getHP() << endl;
+				cout << player->getName() << " 체력 : " << player->GetHP() << endl;
 
 				// 플레이어 사망
-				if (player->isDead()) {
+				if (player->IsDead()) {
 					cout << player->getName() << "이(가) 사망했습니다. 게임 오버!";
 					system("pause");
 					return false;
@@ -152,21 +151,21 @@ bool Battle::BossBegin()
 
 		// 2. 플레이어 스텟 확인
 		else if (choice == 2) {
-			player->displayStatus();
+			player->PrintStat();
 			system("pause");
 			continue;
 		}
 
 		// 3. 적 스텟 확인
 		else if (choice == 3) {
-			monster->displayStatus();
+			//monster->displayStatus();
 			system("pause");
 			continue;
 		}
 
 		// 4. 인벤토리 확인
 		else if (choice == 4) {
-			player->displayInventory();
+			//player->displayInventory();
 			system("pause");
 			continue;
 		}

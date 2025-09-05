@@ -4,19 +4,21 @@ GameManager::GameManager()
 {
 
 	// 1. 캐릭터 생성
-	string name;
+	/*string name;
 	cout << "캐릭터 이름을 입력하세요: ";
 	getline(cin >> ws, name);
 	cout << endl;
 
-	player = getCharacter(name);
+	player = getCharacter(name);*/
+	player = Character::GetInstance();
+	player->SetName();
 	isClear = false;
 
 	// 2. 랜덤값 시드 초기화
 	srand(static_cast<unsigned int>(time(NULL)));
 
 	// 3. Shop 생성
-	shop = new Shop();
+	//shop = new Shop();
 
 	BeginGame();
 }
@@ -24,8 +26,7 @@ GameManager::GameManager()
 GameManager::~GameManager()
 {
 	// ----- new로 할당한 것들 해제--------
-	delete player;
-	delete shop;
+	//delete shop;
 
 	cout << "게임을 종료합니다.";
 	return;
@@ -34,7 +35,7 @@ GameManager::~GameManager()
 void GameManager::BeginGame()
 {
 	int choice;
-	while (!(player->isDead()) && !isClear)
+	while (!(player->IsDead()) && !isClear)
 	{
 		system("cls");
 		cout << "1. 전투\n";
@@ -59,13 +60,13 @@ void GameManager::BeginGame()
 		}
 
 		else if (choice == 2) {
-			player->displayStatus();
+			player->PrintStat();
 			system("pause");
 			continue;
 		}
 
 		else if (choice == 3) {
-			player->displayInventory();
+			//player->displayInventory();
 			system("pause");
 			continue;
 		}
@@ -86,7 +87,7 @@ void GameManager::BeginGame()
 		}
 	}
 
-	if (player->isDead()) {
+	if (player->IsDead()) {
 		return;
 	}
 
@@ -97,7 +98,7 @@ void GameManager::BeginGame()
 
 Character* GameManager::getCharacter(string name)
 {
-	Character* player = Character::getInstance(name);
+	Character* player = Character::GetInstance();
 	return player;
 }
 

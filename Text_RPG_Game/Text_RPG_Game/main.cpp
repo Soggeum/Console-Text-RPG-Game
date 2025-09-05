@@ -3,8 +3,9 @@
 using namespace std;
 
 int main() {
-	unique_ptr<GameManager> game;
+	GameManager* game = new GameManager();
 
 	game->BeginGame();
+	delete game;
 	return 0;
 }

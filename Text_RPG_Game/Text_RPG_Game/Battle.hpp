@@ -6,6 +6,7 @@
 #include "Troll.h"
 #include "BossMonster.h"
 #include "GameManager.hpp"
+#include "Character.h"
 
 class Battle
 {
