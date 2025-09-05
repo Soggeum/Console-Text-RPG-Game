@@ -7,6 +7,6 @@ Warrior::Warrior(int attack)
 
 void Warrior::Attack(Monster* mon)
 {    
-    cout << "Warrior 공격" << endl;
+    cout << Character::GetInstance()->getName() << "이(가) " << mon->getName() << "을(를) 공격합니다!" << endl;
     mon->setHp(mon->getHp() - attack);
 }

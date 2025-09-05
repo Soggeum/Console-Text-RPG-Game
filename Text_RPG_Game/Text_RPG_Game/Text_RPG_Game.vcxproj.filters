@@ -16,6 +16,9 @@
     <ClCompile Include="Thief.cpp" />
     <ClCompile Include="Troll.cpp" />
     <ClCompile Include="Warrior.cpp" />
+    <ClCompile Include="AttackBoost.cpp" />
+    <ClCompile Include="HealthPotion.cpp" />
+    <ClCompile Include="Item.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Archer.h" />
@@ -32,5 +35,8 @@
     <ClInclude Include="Thief.h" />
     <ClInclude Include="Troll.h" />
     <ClInclude Include="Warrior.h" />
+    <ClInclude Include="AttackBoost.h" />
+    <ClInclude Include="HealthPotion.h" />
+    <ClInclude Include="Item.h" />
   </ItemGroup>
 </Project>
