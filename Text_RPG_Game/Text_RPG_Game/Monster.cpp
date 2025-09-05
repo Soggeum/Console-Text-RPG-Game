@@ -1,4 +1,6 @@
 #include "Monster.h"
+#include "HealthPotion.h" 
+#include "AttackBoost.h"
 Monster::Monster() {
 	name = "∏ÛΩ∫≈Õ";
 	hp = 100;
