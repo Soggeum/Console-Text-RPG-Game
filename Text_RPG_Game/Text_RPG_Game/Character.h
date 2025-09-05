@@ -7,10 +7,11 @@
 #include "None.h"
 #include "Thief.h"
 #include "Warrior.h"
+#include "Item.h"
+#include "HealthPotion.h"
+#include "AttackBoost.h"
 
 using namespace std;
-
-class Item;
 
 class Character 
 {
@@ -46,7 +47,6 @@ public:
 	void Attack(Monster* mon);
 	void TakeDamage(int dmg);
 	void LevelUp();
-	void UseItem(int index);
 	void PrintStat();
 	void UseGold(int value);
 	void SetName();
@@ -54,7 +54,15 @@ public:
 	int GetLevel();
 	void SetHp(int dmg);
 
+	void showInventory();
+	void UseItem(int index);
+	void AddHp(int hp);
+	void AddAttack(int atk);
+	void AddItem(Item* item);
+
 	void GetReward(int money,int exp);
+
+	void LevelUpCheck();
 
 	//ÀüÁ÷
 	void ClassChange();

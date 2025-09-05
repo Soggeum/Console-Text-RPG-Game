@@ -48,13 +48,14 @@ void Character::LevelUp()
 		maxHealth = (maxHealth + (level * 20));
 		state->SetAttack(state->GetAttack() + (level * 5));
 		health = maxHealth;
+		cout << "레벨이 올랐습니다!"<<level-1<<"->"<<level << endl;
 	}
 	else {
 		cout << "레벨 최대치 도달" << endl;
 		experience = 100;
 	}
 
-	if (level == 5) {
+	if (level == 2) {
 		ClassChange();
 	}
 }
@@ -85,6 +86,14 @@ void Character::ClassChange()
 
 void Character::UseItem(int index)
 {
+	if (index < 0 || index >= inventory.size()) {
+		cout << "유효하지 않은 값입니다" << endl;
+		return;
+	}
+
+	inventory[index]->use(this);
+	delete inventory[index];
+	inventory.erase(inventory.begin() + index);
 }
 
 void Character::PrintStat()
@@ -132,14 +141,50 @@ int Character::GetLevel()
 
 void Character::SetHp(int dmg)
 {
-	health -= dmg;
+	health = dmg;
 }
+
+void Character::AddHp(int hp)
+{
+	health += hp;
+	if (health > maxHealth) health = maxHealth;
+	cout << names << "의 체력이 " << hp << "만큼 회복되었습니다. 현재 체력: " << health << endl;
+}
+
+void Character::AddAttack(int atk)
+{
+	state->AddAttack(atk);
+	cout << names << "의 공격력이 " << atk << "만큼 증가했습니다. 현재 공격력: " << state->GetAttack() << endl;
+
+}
+
+void Character::showInventory() {
+	cout << "인벤토리" << endl;
+	for (size_t i = 0; i < inventory.size(); i++) {
+		cout << i + 1 << ": " << inventory[i]->getName() << endl;
+	}
+	cout << endl;
+}
+
 
 void Character::GetReward(int money, int exp)
 {
 	gold += money;
-	experience += exp;
+	experience += exp;	
+	cout << names << "이(가) 50 EXP와 " << money << " 골드를 획득했습니다.현재 EXP : "
+		<< experience << " / 100, 골드 : " << gold << endl;
 	if (experience >= levelupExp) {
 		LevelUp();
 	}
 }
+
+void Character::LevelUpCheck()
+{
+	
+}
+
+void Character::AddItem(Item* item) {
+	inventory.push_back(item);
+	cout << item->getName() << "을(를) 획득했습니다." << endl;
+}
+

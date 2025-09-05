@@ -1,5 +1,6 @@
 #pragma once
 #include"CharacterState.h"
+#include"Character.h"
 
 class Thief :public CharacterState
 {

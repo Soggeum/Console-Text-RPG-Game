@@ -66,7 +66,7 @@ void GameManager::BeginGame()
 		}
 
 		else if (choice == 3) {
-			//player->displayInventory();
+			player->showInventory();
 			system("pause");
 			continue;
 		}
