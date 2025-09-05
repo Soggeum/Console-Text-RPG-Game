@@ -33,6 +33,24 @@
     <ClCompile Include="Troll.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Archer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CharacterState.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="None.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Thief.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Warrior.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
     <ClCompile Include="Battle.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -62,6 +80,22 @@
     <ClInclude Include="Troll.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Archer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterState.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="None.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Thief.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Warrior.h">
     <ClInclude Include="Battle.hpp">
       <Filter>헤더 파일</Filter>
     </ClInclude>
