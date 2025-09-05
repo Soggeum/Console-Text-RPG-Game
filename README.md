@@ -16,3 +16,5 @@ CH2 Team Project
 ## LogManager Diagram
 <img width="500" height="500" alt="Image" src="https://github.com/user-attachments/assets/1e78d9fe-b986-4641-9511-1940888c791d" />
 
+## Item Diagram
+<img width="489" height="582" alt="image" src="https://github.com/user-attachments/assets/951b9948-9b08-47e2-b288-6f4f443c9d75" />
