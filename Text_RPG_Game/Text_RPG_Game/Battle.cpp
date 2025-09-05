@@ -125,8 +125,7 @@ bool Battle::BossBegin()
 
 		// 1. 공격 시나리오
 		if (choice == 1) {
-			monster->takeDamage(player->GetAttack());
-			cout << player->getName() << "이(가) " << monster->getName() << "을(를) 공격합니다!";
+			player->Attack(monster);
 
 			// 몬스터 사망
 			if (monster->getHp() <= 0) {
@@ -138,7 +137,7 @@ bool Battle::BossBegin()
 
 			// 몬스터의 공격
 			else {
-				cout << monster->getName() << "이(가) " << player->getName() << "을(를) 공격합니다!";
+				cout << "보스 몬스터 " << monster->getName() << "이(가) " << player->getName() << "을(를) 공격합니다!";
 				player->TakeDamage(monster->getAttack());
 
 				cout << player->getName() << " 체력 : " << player->GetHP() << endl;
@@ -173,7 +172,7 @@ bool Battle::BossBegin()
 
 		// 4. 인벤토리 확인
 		else if (choice == 4) {
-			//player->displayInventory();
+			player->showInventory();
 			system("pause");
 			continue;
 		}
@@ -182,6 +181,11 @@ bool Battle::BossBegin()
 		else if (choice == 5) {
 			// 아이템 사용 함수
 			// ----------------------------------------//
+			player->showInventory();
+			cout << "사용할 아이템 번호: ";
+			int index;
+			cin >> index;
+			player->UseItem(index - 1);
 			system("pause");
 			continue;
 		}
