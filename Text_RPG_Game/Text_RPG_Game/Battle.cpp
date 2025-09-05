@@ -2,6 +2,7 @@
 
 Battle::Battle(Character* player, bool& isClear) : player(player), isClear(isClear)
 {
+	system("cls");
 	if (player->GetLevel() < 10) {
 		monster = generateMonster(player->GetLevel());
 		cout << "몬스터 " << monster->getName() << " 등장!체력: " << monster->getHp() << ", 공격력 : " << monster->getAttack() << endl;
