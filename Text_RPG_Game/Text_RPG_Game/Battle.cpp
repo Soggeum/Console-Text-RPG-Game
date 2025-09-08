@@ -1,6 +1,8 @@
 #include "Battle.hpp"
 
-Battle::Battle(Character* player, bool& isClear) : player(player), isClear(isClear)
+Battle::Battle(Character* player, bool& isClear, LogManager* logManager) : player(player), isClear(isClear), logManager(logManager) {}
+
+void Battle::Init()
 {
 	if (player->GetLevel() < 10) {
 		monster = generateMonster(player->GetLevel());
@@ -12,17 +14,14 @@ Battle::Battle(Character* player, bool& isClear) : player(player), isClear(isCle
 
 	else {
 		monster = generateBossMonster(player->GetLevel());
-		cout << "\033[31m보스 몬스터 " << monster->getName() << " 등장! 체력: " << monster->getHp()<< ", 공격력: " << monster->getAttack() << "\033[0m" <<endl;
+		cout << "\033[31m보스 몬스터 " << monster->getName() << " 등장! 체력: " << monster->getHp() << ", 공격력: " << monster->getAttack() << "\033[0m" << endl;
 
 		// 전투 시작 및 클리어 여부
 		isClear = BossBegin();
 	}
 }
 
-Battle::~Battle()
-{
-	delete monster;
-}
+Battle::~Battle() {}
 
 bool Battle::Begin()
 {
@@ -46,8 +45,11 @@ bool Battle::Begin()
 				if (pItem != nullptr) 
 					player->AddItem(pItem);
 
+				// 몬스터 처치 로그 기록
+				logManager->setLogInput("monsterCount");
 
 				system("pause");
+				delete monster;
 				return false;
 			}
 
@@ -62,6 +64,7 @@ bool Battle::Begin()
 				if (player->IsDead()) {
 					cout << player->getName() << "이(가) 사망했습니다. 게임 오버!";
 					system("pause");
+					delete monster;
 					return false;
 				}
 				system("pause");
@@ -112,8 +115,6 @@ bool Battle::Begin()
 			continue;
 		}
 	}
-
-	return false;
 }
 
 bool Battle::BossBegin()
@@ -132,6 +133,7 @@ bool Battle::BossBegin()
 				cout << monster->getName() << " 처치!\n";
 				cout << "축하합니다!보스 " << monster->getName() << "을 처치하고 게임을 클리어했습니다!" << endl;
 				system("pause");
+				delete monster;
 				return true;
 			}
 
@@ -146,6 +148,7 @@ bool Battle::BossBegin()
 				if (player->IsDead()) {
 					cout << player->getName() << "이(가) 사망했습니다. 게임 오버!";
 					system("pause");
+					delete monster;
 					return false;
 				}
 				system("pause");
@@ -196,8 +199,6 @@ bool Battle::BossBegin()
 			continue;
 		}
 	}
-	
-	return false;
 }
 
 Monster* Battle::generateMonster(int level)

@@ -13,6 +13,13 @@ GameManager::GameManager()
 
 	// 3. Shop 생성
 	//shop = new Shop();
+
+	// 4. LogManager 생성
+	logManager = new LogManager();
+	
+
+	// 5. Battle 생성
+	battle = new Battle(player, isClear, logManager);
 }
 
 GameManager::~GameManager()
@@ -20,6 +27,8 @@ GameManager::~GameManager()
 	// ----- new로 할당한 것들 해제--------
 	//delete shop;
 
+	delete logManager;
+	delete battle;
 	cout << "게임을 종료합니다.";
 	return;
 }
@@ -34,7 +43,8 @@ void GameManager::BeginGame()
 		cout << "2. 플레이어 스텟 확인\n";
 		cout << "3. 플레이어 인벤토리 보기\n";
 		cout << "4. 상점 가기\n";
-		cout << "5. 게임 종료\n";
+		cout << "5. 게임 로그 보기\n";
+		cout << "6. 게임 종료\n";
 		cout << "번호 입력: ";
 
 		cin >> choice;
@@ -47,7 +57,7 @@ void GameManager::BeginGame()
 		}
 
 		if (choice == 1) {
-			Battle battle(player, isClear);
+			battle->Init();
 		}
 
 		else if (choice == 2) {
@@ -70,6 +80,13 @@ void GameManager::BeginGame()
 		}
 
 		else if (choice == 5) {
+			system("cls");
+			logManager->displayLog();
+			system("pause");
+			continue;
+		}
+
+		else if (choice == 6) {
 			return;
 		}
 
@@ -96,5 +113,5 @@ Character* GameManager::getCharacter(string name)
 
 void GameManager::visitShop(Character* player)
 {
-
+	// shop->begin(player);
 }
