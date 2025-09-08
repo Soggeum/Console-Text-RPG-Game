@@ -4,13 +4,14 @@
 
 using namespace std;
 
-template <typename T>
 class LogManager {
 private:
-	map <string, T> logInput;
+	map <string, string> logInput;
 public:
 	LogManager();
-	void setLogInput(string logKey, T logValue);
+	void setLogInput(string logKey);
+	void setLogInput(string logKey, string logValue);
+	void setLogInput(string logKey, int logValue);
 	void displayLog();
 };
 

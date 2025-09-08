@@ -5,18 +5,27 @@
 
 using namespace std;
 
-template<typename T>
-LogManager<T>::LogManager(){
-
+LogManager::LogManager(){
+	logInput["shopCount"] = "0";
+	logInput["usedMoney"] = "0";
+	logInput["monsterCount"] = "0";
+	logInput["currUseItem"] = "없음";
+	logInput["currBuyItem"] = "없음";
 }
 
-template<typename T>
-void LogManager<T>::setLogInput(string logKey, T logValue){
+void LogManager::setLogInput(string logKey) {
+	logInput[logKey] = to_string(stoi(logInput[logKey]) + 1);
+}
+
+void LogManager::setLogInput(string logKey, string logValue) {
 	logInput[logKey] = logValue;
 }
 
-template<typename T>
-void LogManager<T>::displayLog(){
+void LogManager::setLogInput(string logKey, int logValue) {
+	logInput[logKey] = to_string(stoi(logInput[logKey]) + logValue);
+}
+
+void LogManager::displayLog(){
 
 	int optionSellect = 0;
 
@@ -32,19 +41,19 @@ void LogManager<T>::displayLog(){
 		cin >> optionSellect;
 
 		if (optionSellect == 1) {
-			cout << "들린 상점 횟수 : " << logInput[shopCount] << endl;
+			cout << "들린 상점 횟수 : " << logInput["shopCount"] << "회" << endl;
 		}
 		else if (optionSellect == 2) {
-			cout << "상점에서 사용한 금액 : " << logInput[usedMoney] << endl;
+			cout << "상점에서 사용한 금액 : " << logInput["usedMoney"] << "G" << endl;
 		}
 		else if (optionSellect == 3) {
-			cout << "잡은 몬스터 수 : " << logInput[mosterCount] << endl;
+			cout << "잡은 몬스터 수 : " << logInput["mosterCount"] << "마리" << endl;
 		}
 		else if (optionSellect == 4) {
-			cout << "최근 사용한 아이템 : " << logInput[currUseItem] << endl;
+			cout << "최근 사용한 아이템 : " << logInput["currUseItem"] << endl;
 		}
 		else if (optionSellect == 5) {
-			cout << "최근 구매한 아이템 : " << logInput[currBuyItem] << endl;
+			cout << "최근 구매한 아이템 : " << logInput["currBuyItem"] << endl;
 		}
 		else if (optionSellect == 6) {
 			cout << "메인 메뉴로 돌아갑니다" << endl;
