@@ -111,5 +111,5 @@ Character* GameManager::getCharacter(string name)
 
 void GameManager::visitShop(Character* player)
 {
-
+	// shop->begin(player);
 }
