@@ -9,6 +9,7 @@
 #include "Monster.h"
 #include "Battle.hpp"
 // #include "Shop.hpp"
+// #include "LogManager.h"
 #include "Character.h"
 
 
