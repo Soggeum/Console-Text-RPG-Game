@@ -6,7 +6,6 @@
     <ClCompile Include="CharacterState.cpp" />
     <ClCompile Include="Battle.cpp" />
     <ClCompile Include="BossMonster.cpp" />
-    <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Monster.cpp" />
@@ -19,7 +18,8 @@
     <ClCompile Include="AttackBoost.cpp" />
     <ClCompile Include="HealthPotion.cpp" />
     <ClCompile Include="Item.cpp" />
-    <ClInclude Include="LogManager.cpp" />
+    <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="LogManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Archer.h" />

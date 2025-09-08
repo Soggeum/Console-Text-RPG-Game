@@ -5,13 +5,11 @@
 #include <cstdlib>
 #include <ctime>    // time
 #include <memory>
-
 #include "Monster.h"
-#include "Battle.hpp"
 // #include "Shop.hpp"
-// #include "LogManager.h"
+#include "LogManager.h"
 #include "Character.h"
-
+#include "Battle.hpp"
 
 using namespace std;
 
@@ -20,8 +18,9 @@ class GameManager
 private:
 	bool isClear;
 	Character* player;
+	Battle* battle;
 //	Shop* shop;
-//	LogManager* logmanager;
+	LogManager* logManager;
 
 public:
 	GameManager();

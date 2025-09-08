@@ -1,7 +1,5 @@
 #include "LogManager.h"
-#include <iostream>
-#include <string>
-#include <map>
+
 
 using namespace std;
 
@@ -47,7 +45,7 @@ void LogManager::displayLog(){
 			cout << "상점에서 사용한 금액 : " << logInput["usedMoney"] << "G" << endl;
 		}
 		else if (optionSellect == 3) {
-			cout << "잡은 몬스터 수 : " << logInput["mosterCount"] << "마리" << endl;
+			cout << "잡은 몬스터 수 : " << logInput["monsterCount"] << "마리" << endl;
 		}
 		else if (optionSellect == 4) {
 			cout << "최근 사용한 아이템 : " << logInput["currUseItem"] << endl;
