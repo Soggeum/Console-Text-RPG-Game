@@ -123,6 +123,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="Archer.cpp" />
     <ClCompile Include="AttackBoost.cpp" />
     <ClCompile Include="Character.cpp" />
@@ -141,6 +143,7 @@
     <ClCompile Include="Thief.cpp" />
     <ClCompile Include="Troll.cpp" />
     <ClCompile Include="Warrior.cpp" />
+    <ClInclude Include="LogManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Archer.h" />
@@ -160,6 +163,7 @@
     <ClInclude Include="Thief.h" />
     <ClInclude Include="Troll.h" />
     <ClInclude Include="Warrior.h" />
+    <ClInclude Include="LogManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
