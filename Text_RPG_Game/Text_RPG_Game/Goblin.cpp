@@ -1,7 +1,9 @@
 #include "Goblin.h"
+#include "HealthPotion.h" 
+#include "AttackBoost.h"
 Goblin::Goblin(int level) {
-	hp = level*rand()%11+20;
-	attack = level*rand()%6+5;
+	hp = level*(rand()%11+20);
+	attack = level*(rand()%6+5);
 	name = "고블린";
 }
 void Goblin::takeDamage(int damage) {
@@ -20,4 +22,5 @@ Item* Goblin::dropItem() {
 			return item;//버프물약
 		}
 	}
+	return nullptr;
 }

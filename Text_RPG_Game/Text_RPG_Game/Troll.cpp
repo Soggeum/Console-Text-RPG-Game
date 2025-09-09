@@ -1,7 +1,9 @@
 #include "Troll.h"
+#include "HealthPotion.h" 
+#include "AttackBoost.h"
 Troll::Troll(int level) {
-	hp = level * rand() % 11 + 20;
-	attack = level * rand() % 6 + 5;
+	hp = level * (rand() % 11 + 20);
+	attack = level * (rand() % 6 + 5);
 	name = "슬라임";
 }
 void Troll::takeDamage(int damage) {
@@ -20,4 +22,5 @@ Item* Troll::dropItem() {
 			return item;//버프물약
 		}
 	}
+	return nullptr;
 }

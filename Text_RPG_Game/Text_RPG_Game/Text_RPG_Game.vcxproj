@@ -123,20 +123,47 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BossMonster.cpp" />
-    <ClCompile Include="Goblin.cpp" />
-    <ClCompile Include="Monster.cpp" />
-    <ClCompile Include="Orc.cpp" />
-    <ClCompile Include="Slime.cpp" />
-    <ClCompile Include="Troll.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Archer.cpp" />
+    <ClCompile Include="AttackBoost.cpp" />
+    <ClCompile Include="Character.cpp" />
+    <ClCompile Include="CharacterState.cpp" />
+    <ClCompile Include="Battle.cpp" />
+    <ClCompile Include="BossMonster.cpp" />
+    <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="Goblin.cpp" />
+    <ClCompile Include="HealthPotion.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="None.cpp" />
+    <ClCompile Include="Orc.cpp" />
+    <ClCompile Include="Slime.cpp" />
+    <ClCompile Include="Thief.cpp" />
+    <ClCompile Include="Troll.cpp" />
+    <ClCompile Include="Warrior.cpp" />
+    <ClInclude Include="LogManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Archer.h" />
+    <ClInclude Include="AttackBoost.h" />
+    <ClInclude Include="Character.h" />
+    <ClInclude Include="CharacterState.h" />
+    <ClInclude Include="Battle.hpp" />
     <ClInclude Include="BossMonster.h" />
+    <ClInclude Include="GameManager.hpp" />
     <ClInclude Include="Goblin.h" />
+    <ClInclude Include="HealthPotion.h" />
+    <ClInclude Include="Item.h" />
     <ClInclude Include="Monster.h" />
+    <ClInclude Include="None.h" />
     <ClInclude Include="Orc.h" />
     <ClInclude Include="Slime.h" />
+    <ClInclude Include="Thief.h" />
     <ClInclude Include="Troll.h" />
+    <ClInclude Include="Warrior.h" />
+    <ClInclude Include="LogManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,4 +1,6 @@
 #include "Monster.h"
+#include "HealthPotion.h" 
+#include "AttackBoost.h"
 Monster::Monster() {
 	name = "몬스터";
 	hp = 100;
@@ -18,4 +20,7 @@ void Monster::setHp(int hp) {
 		hp = 0;
 	}
 	this->hp = hp;
+}
+void Monster::displayStatus() const {
+	cout << name << "의 체력: " << hp << ", 공격력 : " << attack << endl;
 }

@@ -6,6 +6,6 @@ public:
 	Goblin() = default;
 	Goblin(int level);
 	void takeDamage(int damage) override;
-	Item* dropItem()	override;
+	Item* dropItem() override;
 };
 
