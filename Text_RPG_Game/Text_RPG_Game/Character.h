@@ -59,10 +59,14 @@ public:
 	void AddHp(int hp);
 	void AddAttack(int atk);
 	void AddItem(Item* item);
+	void AddGold(int amount);
 
 	void GetReward(int money,int exp);
 
 	void LevelUpCheck();
+
+	Item* GetItemFromInventory(int index); // 인벤토리에서 아이템 포인터 가져오기
+	void RemoveItemFromInventory(int index); // 인벤토리에서 아이템 제거 및 메모리 해제
 
 	//전직
 	void ClassChange();

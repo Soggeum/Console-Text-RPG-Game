@@ -125,6 +125,7 @@
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Shop.cpp" />
     <ClCompile Include="Archer.cpp" />
     <ClCompile Include="AttackBoost.cpp" />
     <ClCompile Include="Character.cpp" />
@@ -146,6 +147,7 @@
     <ClCompile Include="Warrior.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Shop.hpp" />
     <ClInclude Include="Archer.h" />
     <ClInclude Include="AttackBoost.h" />
     <ClInclude Include="Character.h" />

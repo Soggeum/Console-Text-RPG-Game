@@ -6,7 +6,7 @@
 #include <ctime>    // time
 #include <memory>
 #include "Monster.h"
-// #include "Shop.hpp"
+#include "Shop.hpp"
 #include "LogManager.h"
 #include "Character.h"
 #include "Battle.hpp"
@@ -19,7 +19,7 @@ private:
 	bool isClear;
 	Character* player;
 	Battle* battle;
-//	Shop* shop;
+	Shop* shop;
 	LogManager* logManager;
 
 public:
