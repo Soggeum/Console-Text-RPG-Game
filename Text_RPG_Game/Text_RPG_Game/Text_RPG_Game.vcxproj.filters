@@ -6,7 +6,6 @@
     <ClCompile Include="CharacterState.cpp" />
     <ClCompile Include="Battle.cpp" />
     <ClCompile Include="BossMonster.cpp" />
-    <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Monster.cpp" />
@@ -19,6 +18,9 @@
     <ClCompile Include="AttackBoost.cpp" />
     <ClCompile Include="HealthPotion.cpp" />
     <ClCompile Include="Item.cpp" />
+    <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="LogManager.cpp" />
+    <ClCompile Include="Shop.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Archer.h" />
@@ -38,5 +40,7 @@
     <ClInclude Include="AttackBoost.h" />
     <ClInclude Include="HealthPotion.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="LogManager.h" />
+    <ClInclude Include="Shop.hpp" />
   </ItemGroup>
 </Project>

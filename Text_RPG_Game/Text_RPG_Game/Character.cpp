@@ -184,6 +184,10 @@ void Character::LevelUpCheck()
 }
 
 void Character::AddItem(Item* item) {
+	if (item == nullptr) {
+		cout << "[오류] 유효하지 않은 아이템을 추가할 수 없습니다." << endl;
+		return; // 함수를 즉시 종료하여 비정상 종료 방지
+	}
 	inventory.push_back(item);
 	cout << item->getName() << "을(를) 획득했습니다." << endl;
 }

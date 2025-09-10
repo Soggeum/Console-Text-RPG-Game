@@ -123,6 +123,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Shop.cpp" />
     <ClCompile Include="Archer.cpp" />
     <ClCompile Include="AttackBoost.cpp" />
     <ClCompile Include="Character.cpp" />
@@ -133,6 +136,7 @@
     <ClCompile Include="Goblin.cpp" />
     <ClCompile Include="HealthPotion.cpp" />
     <ClCompile Include="Item.cpp" />
+    <ClCompile Include="LogManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="None.cpp" />
@@ -143,6 +147,7 @@
     <ClCompile Include="Warrior.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Shop.hpp" />
     <ClInclude Include="Archer.h" />
     <ClInclude Include="AttackBoost.h" />
     <ClInclude Include="Character.h" />
@@ -160,6 +165,7 @@
     <ClInclude Include="Thief.h" />
     <ClInclude Include="Troll.h" />
     <ClInclude Include="Warrior.h" />
+    <ClInclude Include="LogManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
