@@ -10,6 +10,7 @@
 #include "Item.h"
 #include "HealthPotion.h"
 #include "AttackBoost.h"
+#include "LogManager.h"
 
 using namespace std;
 
@@ -55,7 +56,7 @@ public:
 	void SetHp(int dmg);
 
 	void showInventory();
-	void UseItem(int index);
+	void UseItem(int index, LogManager* log);
 	void AddHp(int hp);
 	void AddAttack(int atk);
 	void AddItem(Item* item);
