@@ -64,7 +64,7 @@ bool Battle::Begin()
 
 				// 플레이어 사망
 				if (player->IsDead()) {
-					cout << player->getName() << "이(가) 사망했습니다. 게임 오버!";
+					cout << player->getName() << "이(가) 사망했습니다. 게임 오버!\n";
 					system("pause");
 					system("cls");
 					delete monster;

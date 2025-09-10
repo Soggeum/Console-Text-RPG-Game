@@ -98,10 +98,12 @@ void GameManager::BeginGame()
 	}
 
 	if (player->IsDead()) {
+		logManager->displayAllLog();
 		return;
 	}
 
 	if (isClear) {
+		logManager->displayAllLog();
 		return;
 	}
 }
