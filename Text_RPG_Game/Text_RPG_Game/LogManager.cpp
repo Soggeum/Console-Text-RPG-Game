@@ -60,6 +60,8 @@ void LogManager::displayLog(){
 		else {
 			cout << "잘못된 입력 방식입니다. 다시 입력해주세요 : " << endl;
 		}
+
+		system("cls");
 	}
 }
 
