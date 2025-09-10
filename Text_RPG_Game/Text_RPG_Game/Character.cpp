@@ -1,6 +1,7 @@
 #include <algorithm>
 #include "Character.h"
 
+
 Character* Character::instance = nullptr;
 
 Character::Character()
@@ -37,7 +38,12 @@ void Character::Attack(Monster* mon)
 
 void Character::TakeDamage(int dmg)
 {
-	health -= dmg;
+	if (health - dmg < 0) {
+		health = 0;
+	}
+	else {
+		health -= dmg;
+	}
 }
 
 void Character::LevelUp()
@@ -84,7 +90,7 @@ void Character::ClassChange()
 	state = newState;
 }
 
-void Character::UseItem(int index)
+void Character::UseItem(int index,LogManager* log)
 {
 	if (index < 0 || index >= inventory.size()) {
 		cout << "유효하지 않은 값입니다" << endl;
@@ -92,6 +98,8 @@ void Character::UseItem(int index)
 	}
 
 	inventory[index]->use(this);
+	log->setLogInput("currUseItem", inventory[index]->getName());
+
 	delete inventory[index];
 	inventory.erase(inventory.begin() + index);
 }
@@ -141,6 +149,7 @@ int Character::GetLevel()
 
 void Character::SetHp(int dmg)
 {
+
 	health = dmg;
 }
 
@@ -184,6 +193,10 @@ void Character::LevelUpCheck()
 }
 
 void Character::AddItem(Item* item) {
+	if (item == nullptr) {
+		cout << "[오류] 유효하지 않은 아이템을 추가할 수 없습니다." << endl;
+		return; // 함수를 즉시 종료하여 비정상 종료 방지
+	}
 	inventory.push_back(item);
 	cout << item->getName() << "을(를) 획득했습니다." << endl;
 }

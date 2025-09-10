@@ -1,7 +1,5 @@
-#include "LogManager.h"
-#include <iostream>
-#include <string>
-#include <map>
+Ôªø#include "LogManager.h"
+
 
 using namespace std;
 
@@ -9,8 +7,12 @@ LogManager::LogManager(){
 	logInput["shopCount"] = "0";
 	logInput["usedMoney"] = "0";
 	logInput["monsterCount"] = "0";
-	logInput["currUseItem"] = "æ¯¿Ω";
-	logInput["currBuyItem"] = "æ¯¿Ω";
+	logInput["useHPCount"] = "0";
+	logInput["useABCount"] = "0";
+	logInput["buyHPCount"] = "0";
+	logInput["buyABCount"] = "0";
+	logInput["currUseItem"] = "ÏóÜÏùå";
+	logInput["currBuyItem"] = "ÏóÜÏùå";
 }
 
 void LogManager::setLogInput(string logKey) {
@@ -19,6 +21,22 @@ void LogManager::setLogInput(string logKey) {
 
 void LogManager::setLogInput(string logKey, string logValue) {
 	logInput[logKey] = logValue;
+	if (logKey == "currUseItem") {
+		if (logValue == "Ï≤¥Î†• Ìè¨ÏÖò") {
+			logInput["useHPCount"] = to_string(stoi(logInput["useHPCount"]) + 1);
+		}
+		else if (logValue == "Í≥µÍ≤©Î†• Î∂ÄÏä§Ìä∏") {
+			logInput["useABCount"] = to_string(stoi(logInput["useABCount"]) + 1);
+		}
+	}
+	else if (logKey == "currBuyItem") {
+		if (logValue == "Ï≤¥Î†• Ìè¨ÏÖò") {
+			logInput["buyHPCount"] = to_string(stoi(logInput["buyHPCount"]) + 1);
+		}
+		else if (logValue == "Í≥µÍ≤©Î†• Î∂ÄÏä§Ìä∏") {
+			logInput["buyABCount"] = to_string(stoi(logInput["buyABCount"]) + 1);
+		}
+	}
 }
 
 void LogManager::setLogInput(string logKey, int logValue) {
@@ -30,38 +48,57 @@ void LogManager::displayLog(){
 	int optionSellect = 0;
 
 	while(true) {
-		cout << "1. µÈ∏∞ ªÛ¡° »Ωºˆ" << endl;		// Key∞™ : shopCount, Value∞™ : int
-		cout << "2. ªÛ¡°ø°º≠ ªÁøÎ«— ±›æ◊" << endl;	// Key∞™ : usedMoney, Value∞™ : int
-		cout << "3. ¿‚¿∫ ∏ÛΩ∫≈Õ ºˆ" << endl;		// Key∞™ : monsterCount, Value∞™ : int
-		cout << "4. √÷±Ÿ ªÁøÎ«— æ∆¿Ã≈€" << endl;	// Key∞™ : currUseItem, Value∞™ : string
-		cout << "5. √÷±Ÿ ±∏∏≈«— æ∆¿Ã≈€" << endl;	// Key∞™ : currBuyItem, Value∞™ : string
-		cout << "6. ∏ﬁ¿Œ ∏ﬁ¥∫∑Œ µπæ∆∞°±‚" << endl;	// ∏ﬁ¿Œ »≠∏È¿∏∑Œ µπæ∆∞°±‚
-		cout << "ø¯«œ¥¬ ø…º«¿« º˝¿⁄∏¶ ¿‘∑¬«ÿ¡÷ººø‰ : ";
+		system("cls");
+		cout << "1. Îì§Î¶∞ ÏÉÅÏ†ê ÌöüÏàò" << endl;		// KeyÍ∞í : shopCount, ValueÍ∞í : int
+		cout << "2. ÏÉÅÏ†êÏóêÏÑú ÏÇ¨Ïö©Ìïú Í∏àÏï°" << endl;	// KeyÍ∞í : usedMoney, ValueÍ∞í : int
+		cout << "3. Ïû°ÏùÄ Î™¨Ïä§ÌÑ∞ Ïàò" << endl;		// KeyÍ∞í : monsterCount, ValueÍ∞í : int
+		cout << "4. ÏµúÍ∑º ÏÇ¨Ïö©Ìïú ÏïÑÏù¥ÌÖú" << endl;	// KeyÍ∞í : currUseItem, ValueÍ∞í : string
+		cout << "5. ÏµúÍ∑º Íµ¨Îß§Ìïú ÏïÑÏù¥ÌÖú" << endl;	// KeyÍ∞í : currBuyItem, ValueÍ∞í : string
+		cout << "6. Î©îÏù∏ Î©îÎâ¥Î°ú ÎèåÏïÑÍ∞ÄÍ∏∞" << endl;	// Î©îÏù∏ ÌôîÎ©¥ÏúºÎ°ú ÎèåÏïÑÍ∞ÄÍ∏∞
+		cout << "ÏõêÌïòÎäî ÏòµÏÖòÏùò Ïà´ÏûêÎ•º ÏûÖÎ†•Ìï¥Ï£ºÏÑ∏Ïöî : ";
 
 		cin >> optionSellect;
 
 		if (optionSellect == 1) {
-			cout << "µÈ∏∞ ªÛ¡° »Ωºˆ : " << logInput["shopCount"] << "»∏" << endl;
+			cout << "Îì§Î¶∞ ÏÉÅÏ†ê ÌöüÏàò : " << logInput["shopCount"] << "Ìöå" << endl;
+			system("pause");
 		}
 		else if (optionSellect == 2) {
-			cout << "ªÛ¡°ø°º≠ ªÁøÎ«— ±›æ◊ : " << logInput["usedMoney"] << "G" << endl;
+			cout << "ÏÉÅÏ†êÏóêÏÑú ÏÇ¨Ïö©Ìïú Í∏àÏï° : " << logInput["usedMoney"] << " Gold" << endl;
+			system("pause");
 		}
 		else if (optionSellect == 3) {
-			cout << "¿‚¿∫ ∏ÛΩ∫≈Õ ºˆ : " << logInput["mosterCount"] << "∏∂∏Æ" << endl;
+			cout << "Ïû°ÏùÄ Î™¨Ïä§ÌÑ∞ Ïàò : " << logInput["monsterCount"] << "ÎßàÎ¶¨" << endl;
+			system("pause");
 		}
 		else if (optionSellect == 4) {
-			cout << "√÷±Ÿ ªÁøÎ«— æ∆¿Ã≈€ : " << logInput["currUseItem"] << endl;
+			cout << "ÏµúÍ∑º ÏÇ¨Ïö©Ìïú ÏïÑÏù¥ÌÖú : " << logInput["currUseItem"] << endl;
+			system("pause");
 		}
 		else if (optionSellect == 5) {
-			cout << "√÷±Ÿ ±∏∏≈«— æ∆¿Ã≈€ : " << logInput["currBuyItem"] << endl;
+			cout << "ÏµúÍ∑º Íµ¨Îß§Ìïú ÏïÑÏù¥ÌÖú : " << logInput["currBuyItem"] << endl;
+			system("pause");
 		}
 		else if (optionSellect == 6) {
-			cout << "∏ﬁ¿Œ ∏ﬁ¥∫∑Œ µπæ∆∞©¥œ¥Ÿ" << endl;
+			cout << "Î©îÏù∏ Î©îÎâ¥Î°ú ÎèåÏïÑÍ∞ëÎãàÎã§" << endl;
 			break;
 		}
 		else {
-			cout << "¿ﬂ∏¯µ» ¿‘∑¬ πÊΩƒ¿‘¥œ¥Ÿ. ¥ŸΩ√ ¿‘∑¬«ÿ¡÷ººø‰ : " << endl;
+			cout << "ÏûòÎ™ªÎêú ÏûÖÎ†• Î∞©ÏãùÏûÖÎãàÎã§." << endl;
+			system("pause");
 		}
 	}
+}
+
+void LogManager::displayAllLog() {
+	cout << "Îì§Î¶∞ ÏÉÅÏ†ê ÌöüÏàò : " << logInput["shopCount"] << "Ìöå" << endl;
+	cout << "ÏÉÅÏ†êÏóêÏÑú ÏÇ¨Ïö©Ìïú Í∏àÏï° : " << logInput["usedMoney"] << " Gold" << endl;
+	cout << "Ïû°ÏùÄ Î™¨Ïä§ÌÑ∞ Ïàò : " << logInput["monsterCount"] << "ÎßàÎ¶¨" << endl;
+	cout << endl;
+	cout << "ÏÇ¨Ïö©Ìïú Ï≤¥Î†• Ìè¨ÏÖò : " << logInput["useHPCount"] << "Î≤à" << endl;
+	cout << "ÏÇ¨Ïö©Ìïú Í≥µÍ≤©Î†• Î∂ÄÏä§Ìä∏ : " << logInput["useABCount"] << "Î≤à" << endl;
+	cout << endl;
+	cout << "Íµ¨Îß§Ìïú Ï≤¥Î†• Ìè¨ÏÖò : " << logInput["buyHPCount"] << "Î≤à" << endl;
+	cout << "Íµ¨Îß§Ìïú Í≥µÍ≤©Î†• Î∂ÄÏä§Ìä∏ : " << logInput["buyABCount"] << "Î≤à" << endl;
 }
 

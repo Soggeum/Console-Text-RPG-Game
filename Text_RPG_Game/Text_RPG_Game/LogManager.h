@@ -1,6 +1,7 @@
 #pragma once
 #include <map>
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -13,6 +14,7 @@ public:
 	void setLogInput(string logKey, string logValue);
 	void setLogInput(string logKey, int logValue);
 	void displayLog();
+	void displayAllLog();
 };
 
 
