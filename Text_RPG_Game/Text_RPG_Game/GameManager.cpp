@@ -56,6 +56,7 @@ void GameManager::BeginGame()
 		}
 
 		if (choice == 1) {
+			system("cls");
 			battle->Init();
 		}
 
@@ -67,6 +68,7 @@ void GameManager::BeginGame()
 		}
 
 		else if (choice == 3) {
+			system("cls");
 			player->showInventory();
 			system("pause");
 			continue;
