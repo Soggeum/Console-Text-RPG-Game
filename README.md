@@ -1,8 +1,9 @@
 # Console-Text-RPG-Game
 CH2 Team Project
 
-# UML 다이어그램 [임시]
-<img width="1760" height="973" alt="image" src="https://github.com/user-attachments/assets/c8bb8473-ddb1-4887-a2f6-aa084d7f2200" />
+# UML 다이어그램
+<img width="1699" height="1089" alt="image" src="https://github.com/user-attachments/assets/d5478e91-3ef6-425b-8d07-21f89cf3e8b4" />
+
 
 
 ## GameManager Diagram
