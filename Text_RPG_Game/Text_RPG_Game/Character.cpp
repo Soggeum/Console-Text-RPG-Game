@@ -1,6 +1,7 @@
 #include <algorithm>
 #include "Character.h"
 
+
 Character* Character::instance = nullptr;
 
 Character::Character()
@@ -84,7 +85,7 @@ void Character::ClassChange()
 	state = newState;
 }
 
-void Character::UseItem(int index)
+void Character::UseItem(int index,LogManager* log)
 {
 	if (index < 0 || index >= inventory.size()) {
 		cout << "유효하지 않은 값입니다" << endl;
@@ -92,6 +93,8 @@ void Character::UseItem(int index)
 	}
 
 	inventory[index]->use(this);
+	log->setLogInput("currUseItem", inventory[index]->getName());
+
 	delete inventory[index];
 	inventory.erase(inventory.begin() + index);
 }
