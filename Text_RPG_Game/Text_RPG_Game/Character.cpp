@@ -38,7 +38,12 @@ void Character::Attack(Monster* mon)
 
 void Character::TakeDamage(int dmg)
 {
-	health -= dmg;
+	if (health - dmg < 0) {
+		health = 0;
+	}
+	else {
+		health -= dmg;
+	}
 }
 
 void Character::LevelUp()
@@ -144,6 +149,7 @@ int Character::GetLevel()
 
 void Character::SetHp(int dmg)
 {
+
 	health = dmg;
 }
 

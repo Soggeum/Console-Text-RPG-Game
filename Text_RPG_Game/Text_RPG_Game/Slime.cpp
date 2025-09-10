@@ -2,8 +2,8 @@
 #include "HealthPotion.h" 
 #include "AttackBoost.h"
 Slime::Slime(int level) {
-	hp = level * (rand() % 11 + 20);
-	attack = level * (rand() % 6 + 5);
+	hp = level * (rand() % 11 + 20)*level/2;
+	attack = level * (rand() % 6 + 5)*level/2;
 	name = "ΩΩ∂Û¿”";
 }
 void Slime::takeDamage(int damage) {

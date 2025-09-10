@@ -3,8 +3,8 @@
 #include "AttackBoost.h"
 BossMonster::BossMonster(int level) {
 
-	hp = (level * (rand() % 11 + 20)) * 1.5;//소수점버림
-	attack = (level * (rand() % 6 + 5))*1.5;//소수점버림
+	hp = (level * (rand() % 11 + 20)) * level;
+	attack = (level * (rand() % 6 + 5))*level/2;
 	name = "Dragon";
 }
 void BossMonster::takeDamage(int damage) {
