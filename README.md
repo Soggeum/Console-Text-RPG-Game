@@ -6,7 +6,8 @@ CH2 Team Project
 
 
 ## GameManager Diagram
-<img width="710" height="930" alt="image" src="https://github.com/user-attachments/assets/6eb9b7e3-020d-4390-9dfc-e3e4fd2c42c1" />
+<img width="924" height="978" alt="image" src="https://github.com/user-attachments/assets/5dd0f0c0-c3ca-497d-a139-cda789320ca5" />
+
 
 
 ## 몬스터 다이어그램
