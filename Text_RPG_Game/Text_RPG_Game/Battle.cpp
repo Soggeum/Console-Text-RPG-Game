@@ -111,7 +111,8 @@ bool Battle::Begin()
 			cout << "사용할 아이템 번호: ";
 			int index;
 			cin >> index;
-			player->UseItem(index - 1);
+			player->UseItem(index - 1, logManager);
+			
 			system("pause");
 			system("cls");
 			continue;
@@ -204,7 +205,7 @@ bool Battle::BossBegin()
 			cout << "사용할 아이템 번호: ";
 			int index;
 			cin >> index;
-			player->UseItem(index - 1);
+			player->UseItem(index - 1, logManager);
 			system("pause");
 			system("cls");
 			continue;
