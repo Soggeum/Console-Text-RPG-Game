@@ -81,7 +81,6 @@ void LogManager::displayLog(){
 		}
 		else if (optionSellect == 6) {
 			cout << "메인 메뉴로 돌아갑니다" << endl;
-			system("pause");
 			break;
 		}
 		else {
