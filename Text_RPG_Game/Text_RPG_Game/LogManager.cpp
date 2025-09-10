@@ -68,7 +68,7 @@ void LogManager::displayLog(){
 			system("pause");
 		}
 		else if (optionSellect == 3) {
-			cout << "잡은 몬스터 수 : " << logInput["mosterCount"] << "마리" << endl;
+			cout << "잡은 몬스터 수 : " << logInput["monsterCount"] << "마리" << endl;
 			system("pause");
 		}
 		else if (optionSellect == 4) {
@@ -93,7 +93,7 @@ void LogManager::displayLog(){
 void LogManager::displayAllLog() {
 	cout << "들린 상점 횟수 : " << logInput["shopCount"] << "회" << endl;
 	cout << "상점에서 사용한 금액 : " << logInput["usedMoney"] << " Gold" << endl;
-	cout << "잡은 몬스터 수 : " << logInput["mosterCount"] << "마리" << endl;
+	cout << "잡은 몬스터 수 : " << logInput["monsterCount"] << "마리" << endl;
 	cout << endl;
 	cout << "사용한 체력 포션 : " << logInput["useHPCount"] << "번" << endl;
 	cout << "사용한 공격력 부스트 : " << logInput["useABCount"] << "번" << endl;
