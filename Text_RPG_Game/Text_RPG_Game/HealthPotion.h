@@ -4,14 +4,15 @@
 
 class HealthPotion : public Item {
 private:
-	string name;
+	std::string name;
+	int price;
 	int healthRestore;
 
 public:
-	HealthPotion() : name("체력 포션"), healthRestore(50) {}
+	HealthPotion() : name("체력 포션"), price(30), healthRestore(50) {}
 
-	string getName() override { return name; }
-
+	std::string getName() override { return name; }
+	int getPrice() override { return price; }
 	void use(Character* character) override;
-
+	Item* clone() override { return new HealthPotion(*this); }
 };
