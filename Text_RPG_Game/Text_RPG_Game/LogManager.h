@@ -14,6 +14,7 @@ public:
 	void setLogInput(string logKey, string logValue);
 	void setLogInput(string logKey, int logValue);
 	void displayLog();
+	void displayAllLog();
 };
 
 
