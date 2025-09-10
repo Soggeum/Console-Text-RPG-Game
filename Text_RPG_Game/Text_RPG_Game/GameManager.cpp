@@ -11,12 +11,11 @@ GameManager::GameManager()
 	// 2. 랜덤값 시드 초기화
 	srand(static_cast<unsigned int>(time(NULL)));
 
-	// 3. Shop 생성
-	//shop = new Shop();
-
-	// 4. LogManager 생성
+	// 3. LogManager 생성
 	logManager = new LogManager();
-	
+
+	// 4. Shop 생성
+	shop = new Shop(logManager);
 
 	// 5. Battle 생성
 	battle = new Battle(player, isClear, logManager);
@@ -25,7 +24,7 @@ GameManager::GameManager()
 GameManager::~GameManager()
 {
 	// ----- new로 할당한 것들 해제--------
-	//delete shop;
+	delete shop;
 
 	delete logManager;
 	delete battle;
@@ -112,6 +111,32 @@ Character* GameManager::getCharacter(string name)
 }
 
 void GameManager::visitShop(Character* player)
+{//상점
+	logManager->setLogInput("shopCount");
+	shop->Begin(player);
+}
+void Character::AddGold(int amount)
 {
-	// shop->begin(player);
+	if (amount > 0) {
+		gold += amount;
+		cout << amount << " Gold를 획득했습니다. 현재 소지 금액: " << gold << " Gold" << endl;
+	}
+}
+
+Item* Character::GetItemFromInventory(int index)
+{
+	if (index >= 0 && index < inventory.size()) {
+		return inventory[index];
+	}
+	return nullptr; // 유효하지 않은 인덱스면 nullptr 반환
+}
+
+void Character::RemoveItemFromInventory(int index)
+{
+	if (index >= 0 && index < inventory.size()) {
+		// 1. 메모리 해제
+		delete inventory[index];
+		// 2. 벡터에서 포인터 제거
+		inventory.erase(inventory.begin() + index);
+	}
 }

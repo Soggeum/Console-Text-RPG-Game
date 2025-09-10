@@ -20,6 +20,7 @@
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="LogManager.cpp" />
+    <ClCompile Include="Shop.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Archer.h" />
@@ -40,5 +41,6 @@
     <ClInclude Include="HealthPotion.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="LogManager.h" />
+    <ClInclude Include="Shop.hpp" />
   </ItemGroup>
 </Project>

@@ -18,7 +18,3 @@ void Archer::Attack(Monster* mon)
 		}
 	}
 }
-
-
-
-
