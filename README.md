@@ -8,7 +8,7 @@ CH2 Team Project
 
 ## GameManager Diagram
 <img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/5dd0f0c0-c3ca-497d-a139-cda789320ca5" />
-
+GameManager.cpp / Battle.cpp
 
 
 ## 몬스터 다이어그램
@@ -23,7 +23,3 @@ CH2 Team Project
 
 ## Item&Inventory
 <img width="489" height="582" alt="image" src="https://github.com/user-attachments/assets/951b9948-9b08-47e2-b288-6f4f443c9d75" />
-
-# 게임 기능 시연 영상
-https://github.com/user-attachments/assets/16e703be-2a81-47fc-ad7c-70ad6e26530e
-
