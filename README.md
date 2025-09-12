@@ -6,9 +6,8 @@ CH2 Team Project
 
 
 
-## GameManager Diagram
+## GameManager Diagram (GameManager.cpp / Battle.cpp)
 <img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/5dd0f0c0-c3ca-497d-a139-cda789320ca5" />
-GameManager.cpp / Battle.cpp
 
 
 ## 몬스터 다이어그램
