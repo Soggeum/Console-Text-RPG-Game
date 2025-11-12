@@ -1,5 +1,5 @@
 # Console-Text-RPG-Game
-CH2 Team Project
+Team Project
 
 # UML 다이어그램
 <img width="1699" height="1089" alt="image" src="https://github.com/user-attachments/assets/d5478e91-3ef6-425b-8d07-21f89cf3e8b4" />
